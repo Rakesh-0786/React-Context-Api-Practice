@@ -115,6 +115,60 @@ export default TodoList;
 Now, the todos state from the App component is accessible within the TodoList component without having to pass it through props explicitly. This makes it easier to manage and share state across different parts of your application.
 
 
+// checkbox:
+A checkbox is a graphical user interface element that allows users to select or 
+deselect an option. It typically appears as a small square box that can either be
+ checked (marked) or unchecked (empty). Checkboxes are commonly used in forms, settings 
+ menus, and other interfaces where users need to make selections from multiple options. 
+ When a checkbox is checked, it indicates that the associated option is active or chosen; 
+ when unchecked, it indicates that the option is inactive or not chosen.
+
+
+//  radio button:
+A radio button is another graphical user interface element
+ used in forms and interfaces to allow users to make selections
+  from a set of options. Unlike checkboxes, where users can select 
+  multiple options simultaneously, radio buttons limit users to selecting
+   just one option from a predefined set. Radio buttons are typically represented
+    as small circles or dots accompanied by text labels. When a user selects one radio
+     button within a group, it automatically deselects any other radio buttons within the 
+     same group, ensuring that only one option is chosen at a time. This behavior is similar 
+     to how radio buttons on a car stereo function, hence the name "radio button."
+
+
+    //  span tag:
+    In HTML (Hypertext Markup Language), the <span> tag is a generic inline container used to group and style inline elements or sections of text within a larger block of content. Unlike block-level elements, such as <div>, which create a distinct block of content and typically start on a new line, the <span> tag does not create a new line and is used to apply styles or behavior to specific parts of text or inline elements.
+
+The <span> tag itself does not have any inherent semantic meaning; its purpose is primarily for styling or scripting purposes. It is often used in conjunction with CSS (Cascading Style Sheets) to apply styles, such as font color, font size, text decoration, etc., to specific sections of text within a paragraph or other inline content.
+
+Here's a simple example of how the <span> tag might be used in HTML:
+
+html
+
+<p>This is a <span style="color: red;">red</span> word.</p>
+In this example, the word "red" will be displayed in red color due to the <span> tag wrapping around it and applying an inline style to change its color.
+
+<span> tag as a way to group or highlight a small piece of text or content within a larger paragraph or block of text. It's like using a highlighter to emphasize a specific word or phrase. You can apply styles or scripts to this highlighted portion without affecting the rest of the text around it.
+
+// context api:-
+with the help of context api we dont need to pass the props frm parents to child and we didnot need to update any components through callback .
+
+// createcontext helps us to provide the parents components.
+
+
+// Reducers:
+
+React Provides  a mechanism Reducers is a very powerfull mechanism.
+Reducers is very simple function.
+Reducers take two input 
+1.current state
+2.Action
+
+1.state: here state means which we want to update the state.
+2.Action:
+
+
+
 
 
 

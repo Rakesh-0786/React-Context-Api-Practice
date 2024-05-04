@@ -1,16 +1,12 @@
+import { useSelector } from "react-redux";
 import Todo from "../Todo/Todo";
-import TodoContext from "../../context/TodoContext";
-import { useContext } from "react";
-import TodoDispatchContext from "../../context/TodoDispatchContext";
+function TodoList({editTodo,deleteTodo, todoFinished}) {
 
-function TodoList() {
-    const { list } = useContext(TodoContext);
-    const {dispatch} = useContext(TodoDispatchContext);
+    const list =useSelector((state) => state.todo);
 
 
     function onFinished(todo , isFinished){
-        dispatch({type: 'finish_todo' , payload: {todo, isFinished: isFinished}})
-
+       todoFinished(todo, isFinished);
         // const updatedList = list.map(t => {
         //     if (t.id === todo.id) { // Fixed comparison operator
         //        todo.finished = isFinished;
@@ -22,15 +18,13 @@ function TodoList() {
     }
 
     function onDelete(todo) {
-        dispatch({type: 'delete_todo' , payload: {todo}})
-
+       deleteTodo(todo);
         // const updatedList=list.filter(t => t.id!= todo.id)
         // setList(updatedList);
     }
 
     function onEdit(todo, todoText) {
-        dispatch({type: "edit_todo" , payload: {todo, todoText}})
-
+       editTodo(todo, todoText);
         // const updatedList=list.map(t => {
         //     if(t.id == todo.id){
         //         todo.todoData =todoText;
